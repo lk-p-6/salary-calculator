@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Salary Calculation</title>
+</head>
+<body>
+    <header class="header container">
+        <div class="header__container">
+            <h1>Salary Calculation</h1>
+            <form class="form-calc header__form-calc" id="form-calc">
+                <h2 class="form-calc__h2">Диапазон расчета</h2>
+                <div class="form-calc__field calc-range">
+                    <input class="form-calc__field-input calc-range__from-to" id="currentMonth" type="text" placeholder="С какого месяца считать">
+                    <input class="form-calc__field-input calc-range__from-to" id="calcMonth" type="text" placeholder="ДО какого месяца считать">
+                </div>
+                <h2 class="form-calc__h2">Данные для расчета</h2>
+                <div class="form-calc__field calc-data">
+                    <input class="form-calc__field-input calc-data__input" id="startBal" type="text" placeholder="Начальный баланс в банке">
+                    <input class="form-calc__field-input calc-data__input" id="monthSalary" type="text" placeholder="Месячная зарплата">
+                    <div class="month-big-buying calc-data__input" id="parentElementForInputBigBuying">
+                        <span class="month-big-buying--add" id="month-big-buying--add">+</span>
+                    </div>
+                    <input class="form-calc__field-input calc-data__input" id="monthAvgExpenses" type="text" placeholder="Средние месячные затраты">
+                </div>
+                <button type="submit" class="form-calc__submit" id="formCalcSubmit">Расчитать сейчас</button>
+            </form>
+
+            <div class="header__result">
+                <h2>Результат:</h2>
+                <div class="header__result-container" id="resultParentEntering">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="./assets/html-js/form-calc-handler.js"></script>
+</body>
+</html>
